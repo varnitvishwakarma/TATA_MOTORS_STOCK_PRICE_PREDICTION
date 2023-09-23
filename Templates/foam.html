@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FWI PREDICTION</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .login {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        .login h1 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 400px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 200px;
+            padding: 10px;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #000000;
+        }
+
+        h2 {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="login">
+        <h1>TATA MOTOR'S STOCK PRICE PREDICTION</h1>
+        
+        <form action="{{ url_for('price_predict')}}" method="post">
+            <input type="text" class="input-field" name="OPEN" placeholder="Enter open price" required="required" /><br>
+            <input type="text" class="input-field" name="HIGH" placeholder="Enter today's high" required="required" /><br>
+            <input type="text" class="input-field" name="LOW" placeholder="Enter today's low" required="required" /><br>
+            <input type="text" class="input-field" name="VOLUME" placeholder="Enter volume" required="required" /><br>
+            <input type="text" class="input-field" name="YEAR" placeholder="Enter year" required="required" /><br>
+            <input type="text" class="input-field" name="MONTH" placeholder="Enter month (IN NUM)" required="required" /><br>
+            <input type="text" class="input-field" name="DATE" placeholder="Enter date" required="required" /><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        <h2>THE PRICE IS {{result}}</h2>
+    </div>
+
+   
+</body>
+</html>

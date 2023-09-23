@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>TATA MOTORS</title>
+
+<style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.centered-h1 {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  text-align: center; /* Added text-align property */
+  width: 100%; /* Added width property to ensure center alignment */
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10%; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  padding: 6px 20px; /* Decreased padding */
+  font-size: 16px;
+  background-color: #e1ebf6;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2rem; 
+  margin-right: 2rem; 
+}
+
+</style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="https://wallpapercave.com/wp/wp4045976.jpg" alt="Background Image">
+    <h1 class="centered-h1">TATA MOTOR'S STOCK PRICE PREDICTION</h1>
+    <div class="button-container">
+      <button id="goToSecondPage">PREDICT NOW</button>
+    </div>
+    <script>
+      const goToSecondPageButton = document.getElementById('goToSecondPage');
+  
+      goToSecondPageButton.addEventListener('click', () => {
+        window.location.href = 'price';
+      });
+    </script>
+  </div>
+</body>
+</html>
